@@ -18,7 +18,7 @@ if (navigator.geolocation) {
 }
 let map = L.map("map").setView([0, 0], 16);
 
-L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}{r}.png", {
   attribution: "Usman Ali",
 }).addTo(map);
 
