@@ -29,9 +29,7 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}{r}.png", {
   attribution: "Usman Ali",
 }).addTo(map);
 
-setTimeout(() => {
-  map.invalidateSize();
-}, 100);
+
 
 // Store markers for each user by their socket ID
 const markers = {};
