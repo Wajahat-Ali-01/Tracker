@@ -33,7 +33,7 @@ io.on("connection", function (socket) {
 
   socket.on("disconnect", () => {
     delete users[socket.id]; // Remove user from the list
-    io.emit("user-diconnected", socket.id); // Notify others
+    io.emit("user-disconnected", socket.id); // Notify others
   });
 });
 
