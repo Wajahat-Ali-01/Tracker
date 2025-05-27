@@ -16,7 +16,12 @@ const users = {};
 
 
 io.on("connection", function (socket) {
-  console.log("User connected:", socket.id);
+
+  if (Object.keys(users).length >= 2) {
+    socket.emit("error-message", "Maximum users connected. Try again later.");
+    socket.disconnect(true); // Disconnect the new user
+    return;
+  }
 
   // Send all existing user locations to the newly connected user
   Object.keys(users).forEach((id) => {

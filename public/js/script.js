@@ -57,3 +57,7 @@ socket.on("user-disconnected", (id) => {
     delete markers[id];
   }
 });
+
+socket.on("error-message", (message) => {
+  alert(message); // Ya koi custom modal/dialog
+});
